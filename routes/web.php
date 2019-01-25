@@ -48,6 +48,11 @@ Route::get('/search', function() {
 		]]]]]
 	);
 	
+	foreach($articles as $article){
+		echo $article['user']['name'].'<br>';
+	}
+	
+	//print_r($articles);exit();
     return $articles;
 });
 
