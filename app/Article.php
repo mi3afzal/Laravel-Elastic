@@ -12,36 +12,19 @@ class Article extends Model
     protected $fillable = ['user_id', 'title', 'body', 'tags'];
 	
 	protected $mappingProperties = array(
-        'user_id' => [
-          'type' => 'text',
-          "analyzer" => "standard",
-        ],
-		'title' => [
-          'type' => 'text',
-          "analyzer" => "standard",
-        ],
-        'body' => [
-          'type' => 'text',
-          "analyzer" => "standard",
-        ],
-        'tags' => [
-          'type' => 'text',
-          "analyzer" => "standard",
-        ],
+        'id' => ['type' => 'integer'],
+        'user_id' => ['type' => 'integer'],
+		'title' => ['type' => 'text'],
+        'body' => ['type' => 'text'],
+        'tags' => ['type' => 'text'],
 		'user' => [
 			"type" => "nested",
 			"properties" => [
-				'name' => [
-					'type' => 'text',
-					"analyzer" => "standard",
-				],
-				'email' => [
-					'type' => 'text',
-					"analyzer" => "standard",
-				]
+				'name' => ['type' => 'text'],
+				'email' => ['type' => 'text']
 			]
 		]
-     );
+    );
 	
 	public function getIndexDocumentData()
     {

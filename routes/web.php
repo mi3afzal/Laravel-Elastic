@@ -10,23 +10,44 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+ 
 
 use App\Article;
 use App\User;
 
 Route::get('/', function () {
-		
-    //Article::deleteIndex();		
-    Article::createIndex($shards = null, $replicas = null);
-
-    //Article::deleteMapping();
-    Article::putMapping($ignoreConflicts = true);
-    //Article::rebuildMapping();
-
-    Article::addAllToIndex();
-
     return view('welcome');
 });
+
+
+Route::get('/index/create', function () {
+    Article::createIndex($shards = null, $replicas = null);
+})->name('index.create');
+
+Route::get('/index/delete', function () {
+    Article::deleteIndex();	// Delete entire Elastic indexing
+})->name('index.delete');
+
+Route::get('/index/add', function () {
+    Article::addAllToIndex();
+})->name('index.add');
+
+
+Route::get('/mapping/create', function () {
+    Article::putMapping($ignoreConflicts = true);
+})->name('mapping.create');
+
+Route::get('/mapping/delete', function () {
+    Article::deleteMapping();
+})->name('mapping.delete');
+
+Route::get('/mapping/rebuild', function () {
+    Article::rebuildMapping();
+})->name('mapping.rebuild');
+
+
+
+
 
 
 Route::get('/search', function() {
@@ -54,7 +75,7 @@ Route::get('/search', function() {
 	
 	//print_r($articles);exit();
     return $articles;
-});
+})->name('search');
 
 
 /*
