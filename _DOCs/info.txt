@@ -1,0 +1,6 @@
+
+
+http://localhost:9200/laravel/articles/_search?q=title:Quae&pretty
+
+http://localhost/Mazhar/elasticlaravel/public/
+

@@ -1,0 +1,42 @@
+
+https://qbox.io/blog/what-is-elasticsearch
+http://www.searchkit.co/
+
+-------------------------------------------------------------------------
+Common terms of Elastic search
+
+
+https://www.tutorialspoint.com/elasticsearch/elasticsearch_basic_concepts.htm
+https://logz.io/blog/10-elasticsearch-concepts/
+https://www.elastic.co/guide/en/elasticsearch/reference/6.2/_basic_concepts.html
+https://velotio.com/blog/2017/8/2/elasticsearch-101-fundamentals-core-concepts
+-------------------------------------------------------------------------
+
+-- Mapping - https://www.elastic.co/guide/en/elasticsearch/reference/1.4/mapping.html
+Mappingedit. Mapping is the process of defining how a document should be mapped to the Search Engine, including its searchable characteristics such as which fields are searchable and if/how they are tokenized. In Elasticsearch, an index may store documents of different "mapping types".
+
+-- Type - https://www.elastic.co/guide/en/elasticsearch/guide/current/mapping.html
+A type in Elasticsearch represents a class of similar documents. ... The mapping, like a database schema, describes the fields or properties that documents of that type may have, the datatype of each field—such as string , integer , or date —and how those fields should be indexed and stored by Lucene.
+
+-- Document - https://www.elastic.co/guide/en/elasticsearch/guide/current/document.html
+Often, we use the terms object and document interchangeably. ... In Elasticsearch, the term document has a specific meaning. It refers to the top-level, or root object that is serialized into JSON and stored in Elasticsearch under a unique ID.
+
+-- Analyzer - https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-analyzers.html
+Elasticsearch ships with a wide range of built-in analyzers, which can be used in any index without further configuration: Standard Analyzer. Whitespace Analyzer. The whitespace analyzer divides text into terms whenever it encounters any whitespace character. It does not lowercase terms.
+
+-- Indexing - https://www.elastic.co/guide/en/elasticsearch/guide/current/_indexing_employee_documents.html
+The act of storing data in Elasticsearch is called indexing, but before we can index a document, we need to decide where to store it. An Elasticsearch cluster can contain multiple indices, which in turn contain multiple types.
+
+
+
+-- Cluster - https://www.digitalocean.com/community/tutorials/how-to-set-up-a-production-elasticsearch-cluster-on-ubuntu-14-04
+Elasticsearch is a popular open source search server that is used for real-time distributed search and analysis of data. When used for anything other than development, Elasticsearch should be deployed across multiple servers as a cluster, for the best performance, stability, and scalability.
+
+-- Node - https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-node.html
+A collection of connected nodes is called a cluster. If you are running a single node of Elasticsearch, then you have a cluster of one node. ... Data node. A node that has node.data set to true (default). Data nodes hold data and perform data related operations such as CRUD, search, and aggregations.
+
+-- Shard - https://qbox.io/blog/optimizing-elasticsearch-how-many-shards-per-index
+In most environments, each node runs on a separate box or virtual machine. index – In Elasticsearch, an index is a collection of documents. shard – Because Elasticsearch is a distributed search engine, an index is usually split into elements known as shards that are distributed across multiple nodes.
+
+-- Instance - https://www.elastic.co/guide/en/elasticsearch/guide/current/running-elasticsearch.html
+A node is a running instance of Elasticsearch. A cluster is a group of nodes with the same cluster.name that are working together to share data and to provide failover and scale.
