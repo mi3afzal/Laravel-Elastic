@@ -3,7 +3,11 @@ http://localhost/Mazhar/elasticlaravel/public/
 
 
 http://localhost:9200/laravel/articles/_search?q=title:Quae&pretty
+
 http://localhost:9200/_cluster/stats?human&pretty
+
+http://localhost:9200/_cat/indices?v
+
 
 
 
